@@ -1,5 +1,6 @@
 import Head from "next/head";
-import LandingPage from "../components/LandingPage";
+import LandingPage from "../components/page/LandingPage";
+import CoupleCard from "../components/utilities/CoupleCard";
 
 export default function Home() {
   return (
@@ -10,8 +11,8 @@ export default function Home() {
       </Head>
       <main className="relative">
         <LandingPage />
-        <div className="h-screen">
-
+        <div className="flex justify-center">
+          <CoupleCard />
         </div>
       </main>
     </div>
