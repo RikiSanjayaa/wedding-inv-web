@@ -1,67 +1,44 @@
 export default function Footer() {
-    const handleScroll = () => {
-      window.scrollBy({
-        top: window.innerHeight,
-        behavior: 'smooth'
-      })
-    }
-
     return (
-        <div className="relative h-[325px] flex flex-col justify-start items-center gap-[100px]">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url(/images/landing_img.png)", // Ganti dengan URL gambar
-          }}
-        ></div>
-      
-        {/* Overlay Gelap */}
+      <div className="relative inset-0 bg-cover bg-center h-44 md:h-60 lg:h-80" style={{ backgroundImage: 'url(/images/landing_img.png)' }}>
+        {/* Overlay hitam dengan kecerahan 5 */}
         <div className="absolute inset-0 bg-black opacity-5"></div>
-      
-        {/* Konten */}
-        <div className="relative flex flex-col justify-start items-center gap-[100px]">
-          <div className="w-[50px] h-[50px] relative">
-            <div className="absolute left-[16px] top-[16px] flex flex-col justify-start items-center gap-px">
-              <div className="flex flex-col justify-start items-center"></div>
-              <div className="w-[3px] h-[3px] bg-white rounded-full"></div>
+  
+        <div className="h-full w-full flex-col justify-center items-center gap-[50px] md:gap-[60px] 2xl:gap-[70px] inline-flex relative z-10">
+          <div className="w-[25px] h-[25px] relative">
+            <div className="w-[9px] h-[9px] left-[8px] top-[8px] absolute flex-col justify-start items-center gap-px inline-flex">
+              <div className="flex-col justify-start items-center flex" />
+              <div className="w-0.5 h-0.5 bg-white rounded-full" />
             </div>
           </div>
-          <div className="w-[1000px] h-[175px] relative">
-            {/* Nama Asep */}
-            <div className="absolute top-0 left-[78px] h-[92px] px-[140px] rounded-[20px] border-2 border-white flex justify-center items-center">
-              <div className="h-[92px] p-2.5 flex justify-center items-center">
-                <div className="text-white text-6xl font-normal font-['Allura'] leading-[72px]">Asep</div>
+  
+          <div className="flex-col justify-start items-center gap-[25px] flex">
+            <div className="w-[400.72px] h-14 relative">
+              <div className="w-[136.53px] h-14 px-[90px] left-0 top-0 absolute rounded-[10px] border border-white justify-center items-center gap-2.5 inline-flex">
+                <div className="h-14 p-2.5 justify-center items-center gap-2.5 flex">
+                  <div className="w-[61px] text-white text-3xl font-normal font-['Allura'] leading-9">Asep</div>
+                </div>
               </div>
-            </div>
-      
-            {/* Nama Putri */}
-            <div className="absolute top-0 left-[501px] h-[92px] px-[140px] rounded-[20px] border-2 border-white flex justify-center items-center">
-              <div className="h-[92px] p-2.5 flex justify-center items-center">
-                <div className="text-white text-6xl font-normal font-['Allura'] leading-[72px]">Putri</div>
+              <div className="w-[134.87px] h-14 px-[90px] left-[200.86px] top-0 absolute rounded-[10px] border border-white justify-center items-center gap-2.5 inline-flex">
+                <div className="h-14 p-2.5 justify-center items-center gap-2.5 flex">
+                  <div className="w-[60px] text-white text-3xl font-normal font-['Allura'] leading-9">Putri</div>
+                </div>
               </div>
+              <div className="w-[11px] h-1 left-[133.03px] top-[26px] absolute bg-white rounded-[20px]" />
             </div>
-      
-            {/* Dekorasi */}
-            <div className="absolute top-[111px] left-0 w-[1000px] h-16 flex justify-start items-center">
-              <div className="grow shrink basis-0 p-2.5 flex flex-col justify-start items-start gap-2.5"></div>
-              <div className="relative w-[114px] h-16">
-                <div className="absolute top-0 left-[25px] w-16 h-16"></div>
-                <div className="absolute top-[24px] left-[74px] w-10 h-10"></div>
-                <div className="absolute top-[23px] left-0 w-10 h-10"></div>
+  
+            <div className="self-stretch grow shrink basis-0 justify-start items-center inline-flex">
+              <div className="grow shrink basis-0 p-2.5 flex-col justify-start items-start gap-2.5 inline-flex" />
+              <div className="w-[350.62px] h-5 relative">
+                <div className="w-5 h-5 left-[7.81px] top-[-0px] absolute" />
+                <div className="w-[12.50px] h-[12.50px] left-[23.12px] top-[7.50px] absolute" />
+                <div className="w-[12.50px] h-[12.50px] left-[-0px] top-[7.19px] absolute" />
               </div>
-              <div className="grow shrink basis-0 p-2.5 flex flex-col justify-start items-start gap-2.5"></div>
+              <div className="grow shrink basis-0 p-2.5 flex-col justify-start items-start gap-2.5 inline-flex" />
             </div>
-      
-            {/* Garis Dekorasi */}
-            <div className="absolute top-[41px] left-[477px] w-[34px] h-2.5 bg-white rounded-[20px]"></div>
           </div>
         </div>
-      </div>      
-    )
-
-
-
-
-
-}
+      </div>
+    );
+  }
+  
