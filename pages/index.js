@@ -2,6 +2,7 @@ import Head from "next/head";
 import LandingPage from "../components/page/LandingPage";
 import CoupleCard from "../components/utilities/CoupleCard";
 import Breakpoints from "../components/utilities/Breakpoints";
+import Footer from "../components/page/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
             <Breakpoints />
           </div>
         </div>
+        <Footer />
       </main>
     </div>
   );
