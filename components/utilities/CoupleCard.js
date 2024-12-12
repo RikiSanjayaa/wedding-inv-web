@@ -2,7 +2,7 @@ import OneProfile from "./OneProfile";
 
 export default function CoupleCard() {
   return (
-    <div className="transform -translate-y-20 m-10 h-max px-[20px] md:px-[30px] lg:px-[40px] py-[50px] bg-white rounded-[10px] shadow-soft-sakura justify-center items-center gap-2.5 md:gap-3 lg:gap-3.5 inline-flex">
+    <div className="transform -translate-y-20 m-10 h-max w-full px-[20px] md:px-[30px] lg:px-[40px] py-[50px] bg-white rounded-[10px] shadow-soft-sakura justify-center items-center gap-2.5 md:gap-3 lg:gap-3.5 inline-flex">
       <div className="flex-col justify-start items-center gap-[50px] inline-flex">
         <div className="flex-col justify-center items-center flex">
           <div className="self-stretch p-2.5 justify-center items-center gap-2.5 md:gap-3 lg:gap-3.5 inline-flex">

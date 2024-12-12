@@ -1,6 +1,7 @@
 import Head from "next/head";
 import LandingPage from "../components/page/LandingPage";
 import CoupleCard from "../components/utilities/CoupleCard";
+import Breakpoints from "../components/utilities/Breakpoints";
 
 export default function Home() {
   return (
@@ -11,8 +12,11 @@ export default function Home() {
       </Head>
       <main className="relative">
         <LandingPage />
-        <div className="flex justify-center">
-          <CoupleCard />
+        <div className="mx-10 md:mx-10 lg:mx-20 xl:mx-36 2xl:mx-72">
+          <div className="flex flex-col items-center">
+            <CoupleCard />
+            <Breakpoints />
+          </div>
         </div>
       </main>
     </div>
