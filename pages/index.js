@@ -2,6 +2,7 @@ import Head from "next/head";
 import LandingPage from "../components/page/LandingPage";
 import CoupleCard from "../components/page/CoupleCard";
 import Breakpoints from "../components/utilities/Breakpoints";
+import Footer from "../components/page/Footer";
 import DateAndMaps from "../components/page/DateAndMaps";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
             <Breakpoints />
           </div>
         </div>
+        <Footer />
       </main>
     </div>
   );
