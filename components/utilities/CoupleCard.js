@@ -1,3 +1,4 @@
+import CustomFilledBtn from "./CustomFilledBtn";
 import OneProfile from "./OneProfile";
 
 export default function CoupleCard() {
@@ -20,11 +21,7 @@ export default function CoupleCard() {
             <OneProfile imageSrc="/images/mempelai_wanita.jpg" nama="Putri Amanda" dari="Putri dari" orangTua="Bapak Pelda Laluu Juanda & Ibu Megawati Silaen" />
           </div>
         </div>
-        <div className="bg-[#ff769d] rounded-[10px] flex-col justify-center items-center gap-2.5 md:gap-3 lg:gap-3.5 flex">
-          <div className="h-8 p-5 md:p-6 lg:p-7 text-white text-[13px] md:text-[15px] lg:text-[17px] font-medium font-['Comfortaa'] flex items-center">
-            Our Story
-          </div>
-        </div>
+        <CustomFilledBtn buttonText="Our Story" />
       </div>
     </div>
   )
