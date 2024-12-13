@@ -1,11 +1,12 @@
 import Image from 'next/image';
 
-export default function LandingPage() {
+export default function LandingPage({ togglePlay }) {
   const handleScroll = () => {
     window.scrollBy({
       top: window.innerHeight,
       behavior: 'smooth'
-    })
+    });
+    togglePlay();
   }
 
   return (
@@ -47,7 +48,7 @@ export default function LandingPage() {
             </div>
             <div className="h-px w-20 bg-white"></div>
           </div>
-          <button onClick={handleScroll} className="bottom-40">
+          <button onClick={handleScroll} className="bg-sakura-300 text-white p-4 rounded-full shadow-soft-sakura animate-pulse-grow-shrink hover:animate-none transform hover:scale-110 transition-all duration-300">
             <img src="/images/scroll_btn.png" alt="Scroll Down" className="w-6 h-6" />
           </button>
         </div>

@@ -37,12 +37,12 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-      <text className="text-center text-netral-600 text-base md:text-lg xl:text-xl 2xl:text-2xl pt-20">
+      <p className="text-center text-netral-600 text-base md:text-lg xl:text-xl 2xl:text-2xl pt-20">
         “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapatkan ketenangan hati dan Dia menjadikan kasih sayang dan belas kasihan di antara kalian. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.”
-      </text>
-      <text className="text-center text-netral-600 text-base md:text-lg xl:text-xl 2xl:text-2xl pt-5">
+      </p>
+      <p className="text-center text-netral-600 text-base md:text-lg xl:text-xl 2xl:text-2xl pt-5">
         - AR-RUM 21 -
-      </text>
+      </p>
     </div>
   );
 }

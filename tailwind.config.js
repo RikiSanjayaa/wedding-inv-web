@@ -111,7 +111,16 @@ module.exports = {
       },
       boxShadow: {
         "soft-sakura": "var(--soft-sakura)",
-      }
+      },
+      keyframes: {
+        'pulse-grow-shrink': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' },
+        },
+      },
+      animation: {
+        'pulse-grow-shrink': 'pulse-grow-shrink 2s infinite',
+      },
     },
   },
   plugins: [],

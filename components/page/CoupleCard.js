@@ -2,6 +2,10 @@ import CustomFilledBtn from "../utilities/CustomFilledBtn";
 import OneProfile from "../utilities/OneProfile";
 
 export default function CoupleCard() {
+  const handleScrollToStory = () => {
+    document.getElementById("story").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="transform -translate-y-20 m-10 h-max w-full px-[20px] md:px-[30px] lg:px-[40px] py-[50px] bg-white rounded-[10px] shadow-soft-sakura justify-center items-center gap-2.5 md:gap-3 lg:gap-3.5 inline-flex">
       <div className="flex-col justify-start items-center gap-[50px] inline-flex">
@@ -21,7 +25,7 @@ export default function CoupleCard() {
             <OneProfile imageSrc="/images/mempelai_wanita.jpg" nama="Putri Amanda" dari="Putri dari" orangTua="Bapak Pelda Laluu Juanda & Ibu Megawati Silaen" />
           </div>
         </div>
-        <CustomFilledBtn buttonText="Our Story" />
+        <CustomFilledBtn buttonText="Our Story" onClick={handleScrollToStory} />
       </div>
     </div>
   )
