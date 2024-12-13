@@ -34,6 +34,15 @@ export default function Footer() {
         {/* Garis Sakura */}
         <Breakpoints2 />
       </div>
+
+      {/* Gambar Pembuat Web */}
+      <div className="flex justify-center mt-4">
+        <img 
+          src="/images/depelover.jpg" 
+          alt="Foto Pembuat Web" 
+          className="max-w-full h-auto rounded-lg" 
+        />
+      </div>
     </div>
   );
 }
