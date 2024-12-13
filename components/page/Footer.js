@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div
       className="relative inset-0 bg-cover bg-center h-44 md:h-60 lg:h-80"
-      style={{ backgroundImage: 'url(/images/depelover.jpg)' }}
+      style={{ backgroundImage: 'url(/images/landing_img.png)' }}
     >
       {/* Overlay hitam dengan kecerahan 5 */}
       <div className="absolute inset-0 bg-black opacity-5"></div>
