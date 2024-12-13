@@ -4,6 +4,8 @@ import CoupleCard from "../components/page/CoupleCard";
 import Breakpoints from "../components/utilities/Breakpoints";
 import Footer from "../components/page/Footer";
 import DateAndMaps from "../components/page/DateAndMaps";
+import StorySection from "../components/page/StorySection";
+import Gallery from "../components/page/Gallery";
 
 export default function Home() {
   return (
@@ -19,6 +21,10 @@ export default function Home() {
             <CoupleCard />
             <Breakpoints />
             <DateAndMaps />
+            <Breakpoints />
+            <StorySection />
+            <Breakpoints />
+            <Gallery />
             <Breakpoints />
           </div>
         </div>

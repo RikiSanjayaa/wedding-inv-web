@@ -4,7 +4,7 @@ import TimerBlock from "../utilities/TimerBlock";
 
 export default function DateAndMaps() {
   return (
-    <div className="flex flex-col py-12 md:py-20 lg:py-32 gap-12 md:gap-16 xl:gap-20 2xl:gap-24 items-center">
+    <div className="flex flex-col py-12 md:py-20 gap-12 md:gap-16 xl:gap-20 2xl:gap-24 items-center">
       <Heading text="Waktu & Tempat Pernikahan" />
       <text className="font-allura text-center text-netral-300 font-normal text-2xl md:text-3xl xl:text-4xl">
         Assalamualaikum Warrohmatullah Wabarrakatuhu
