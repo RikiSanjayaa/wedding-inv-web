@@ -7,6 +7,7 @@ import DateAndMaps from "../components/page/DateAndMaps";
 import StorySection from "../components/page/StorySection";
 import Gallery from "../components/page/Gallery";
 import FloatingButton from "../components/utilities/FloatingButton";
+import Pesan from "../components/page/Pesan";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
             <Breakpoints />
             <Gallery />
             <Breakpoints />
+            <Pesan/>
           </div>
         </div>
         <Footer />
