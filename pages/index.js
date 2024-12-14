@@ -8,7 +8,10 @@ import StorySection from "../components/page/StorySection";
 import Gallery from "../components/page/Gallery";
 import FloatingButton from "../components/utilities/FloatingButton";
 import Pesan from "../components/page/Pesan";
+import Hadiah from "../components/page/Hadiah";
+
 import { useState, useEffect } from "react";
+import HadiahPernikahan from "../components/page/Hadiah";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -50,6 +53,7 @@ export default function Home() {
             <StorySection />
             <Breakpoints />
             <Gallery />
+            <Hadiah/>
             <Breakpoints />
             <Pesan/>
           </div>
