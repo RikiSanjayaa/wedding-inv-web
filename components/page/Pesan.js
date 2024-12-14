@@ -29,7 +29,7 @@ export default function FormAndComments() {
   };
 
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16 py-10">
+    <div className="w-full px-4 md:px-8 lg:px-16 py-5">
       {/* Form Input */}
       <div className="bg-white p-8 rounded-[10px] shadow-soft-sakura">
         <h2 className="text-center text-sakura-300 text-2xl md:text-3xl font-bold font-['Comfortaa'] mb-4">
