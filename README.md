@@ -22,45 +22,118 @@ pnpm create next-app --example with-docker nextjs-docker
 
 You can view your images created with `docker images`.
 
-### In existing projects
+## Wedding Invitation — Next.js
 
-To add support for Docker to an existing project, just copy the [`Dockerfile`](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile) into the root of the project and add the following to the `next.config.js` file:
+This repository contains a small Next.js application used as an interactive wedding invitation website. It includes a landing page, couple profile, event date & map, story section, gallery, and a floating audio control.
 
-```js
-// next.config.js
-module.exports = {
-  // ... rest of the configuration.
-  output: "standalone",
-};
+The app was bootstrapped from a Next.js template and includes a Dockerfile and docker-compose configuration for containerized runs.
+
+## Quick overview
+
+- Framework: Next.js (React)
+- Styling: Tailwind CSS (configured via PostCSS)
+- Audio: background music played from `/public/bgm.mp3` with a floating play/pause button
+- Main pages/components: `pages/index.js` composes components from `components/page/*` and `components/utilities/*`
+
+## Requirements
+
+- Node.js 18+ recommended
+- npm (or yarn/pnpm) — package manager
+- (Optional) Docker & docker-compose for containerized runs
+
+## Local development
+
+1. Install dependencies:
+
+```bash
+npm install
 ```
 
-This will build the project as a standalone app inside the Docker image.
-
-## Deploying to Google Cloud Run
-
-1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) so you can use `gcloud` on the command line.
-1. Run `gcloud auth login` to log in to your account.
-1. [Create a new project](https://cloud.google.com/run/docs/quickstarts/build-and-deploy) in Google Cloud Run (e.g. `nextjs-docker`). Ensure billing is turned on.
-1. Build your container image using Cloud Build: `gcloud builds submit --tag gcr.io/PROJECT-ID/helloworld --project PROJECT-ID`. This will also enable Cloud Build for your project.
-1. Deploy to Cloud Run: `gcloud run deploy --image gcr.io/PROJECT-ID/helloworld --project PROJECT-ID --platform managed --allow-unauthenticated`. Choose a region of your choice.
-
-   - You will be prompted for the service name: press Enter to accept the default name, `helloworld`.
-   - You will be prompted for [region](https://cloud.google.com/run/docs/quickstarts/build-and-deploy#follow-cloud-run): select the region of your choice, for example `us-central1`.
-
-## Running Locally
-
-First, run the development server:
+2. Start development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open your browser at http://localhost:3000
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Notes:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- The dev script runs `next dev` from `package.json`.
+- Edit React components under `components/` and styles under `styles/`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Production build
+
+Create an optimized production build and preview it locally:
+
+```bash
+npm run build
+npx next start
+```
+
+The project uses `next.config.js` with `output: "standalone"` so the Docker image builds a standalone production bundle.
+
+## Docker
+
+Build and run using the provided `Dockerfile` and `docker-compose.yml`.
+
+Build the image locally:
+
+```bash
+docker build -t wedding-inv-web .
+```
+
+Run with Docker (exposes port 3000 inside the container):
+
+```bash
+docker run -p 3000:3000 wedding-inv-web
+```
+
+Or use docker-compose (maps host port 3001 to container 3000 by default):
+
+```bash
+docker-compose up --build
+```
+
+Notes:
+
+- The `Dockerfile` expects a lockfile (yarn.lock, package-lock.json or pnpm-lock.yaml) to install dependencies in CI-like mode. If you don't have one, Docker build may exit with "Lockfile not found." You can add a lockfile by running `npm install` locally before building.
+
+## Project structure
+
+- `pages/` — Next.js pages. `pages/index.js` is the main entry.
+- `components/page/` — Page-level components (LandingPage, CoupleCard, DateAndMaps, Gallery, StorySection, Footer)
+- `components/utilities/` — Reusable UI pieces (FloatingButton, TimerBlock, OneProfile, etc.)
+- `public/` — Static assets (images, `bgm.mp3`, favicon)
+- `styles/` — Global CSS and module styles (Tailwind + custom CSS)
+- `Dockerfile`, `docker-compose.yml` — Containerization files
+- `next.config.js` — Next configuration (standalone output)
+
+## Environment & runtime notes
+
+- The app serves static assets from `/public`.
+- Background music file is loaded from `/bgm.mp3`. Autoplay may be blocked by browsers — the UI exposes a play/pause control (`FloatingButton`) and the landing page includes a toggle.
+
+## Deployment suggestions
+
+- Build the Docker image and deploy to any container host (AWS ECS, GCP Cloud Run, Azure App Service, Fly.io, DigitalOcean App Platform).
+- When using the Dockerfile, ensure a lockfile exists in the repo so the build step can install dependencies.
+
+## Troubleshooting
+
+- If Docker build fails with "Lockfile not found.": create a lockfile by running `npm install` locally, then try building again.
+- If audio won't autoplay: browsers often block autoplay with sound. Use the on-page play button to start audio.
+
+## Next steps / improvements
+
+- Add a CI workflow (GitHub Actions) to lint, typecheck, build and test the app.
+- Add automated tests (Jest + React Testing Library) for key components.
+- Add metadata badges (build status, node version) to README.
+
+---
+
+If you'd like, I can also:
+
+- add a simple GitHub Actions workflow for builds,
+- create a sample `.env.local.example` if there are environment variables to document,
+- or adjust Docker ports/mapping in `docker-compose.yml`.

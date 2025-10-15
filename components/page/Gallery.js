@@ -13,27 +13,27 @@ export default function Gallery() {
   return (
     <div className="flex flex-col items-center py-12 md:py-20">
       <Heading text="Gallery" />
-      <div class="pt-12 md:pt-20 lg-pt-32 grid grid-cols-2 gap-4 md:gap-8 lg:gap-12">
-        <div class="grid gap-4 md:gap-8 lg:gap-12">
+      <div className="pt-12 md:pt-20 lg-pt-32 grid grid-cols-2 gap-4 md:gap-8 lg:gap-12">
+        <div className="grid gap-4 md:gap-8 lg:gap-12">
           <div>
-            <img class="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[0]} alt="" />
+            <img className="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[0]} alt="" />
           </div>
           <div>
-            <img class="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[1]} alt="" />
+            <img className="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[1]} alt="" />
           </div>
           <div>
-            <img class="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[2]} alt="" />
+            <img className="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[2]} alt="" />
           </div>
         </div>
-        <div class="grid gap-4">
+        <div className="grid gap-4">
           <div>
-            <img class="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[3]} alt="" />
+            <img className="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[3]} alt="" />
           </div>
           <div>
-            <img class="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[4]} alt="" />
+            <img className="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[4]} alt="" />
           </div>
           <div>
-            <img class="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[5]} alt="" />
+            <img className="h-auto max-w-full rounded-lg shadow-soft-sakura" src={images[5]} alt="" />
           </div>
         </div>
       </div>

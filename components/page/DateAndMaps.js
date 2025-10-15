@@ -5,7 +5,7 @@ import TimerBlock from "../utilities/TimerBlock";
 
 export default function DateAndMaps() {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("January 25, 2025 07:00:00").getTime();
+    const targetDate = new Date("January 25, 2030 07:00:00").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 
